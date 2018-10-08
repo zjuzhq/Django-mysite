@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Upload File</title>
+</head>
+
+<body>
+	<pre> 
+	</pre>
+	<h1>Focus on predictability, Abandon beauty...</h1>
+	<br><br>
+	<h1>Please change the filename to English...it is hard to solve the encoding problem.</h1>
+			<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				<input type="file" name="zqfile">
+				<input type="submit">
+			</form>
+			<pre>
+
+
+			</pre>
+			<h1>Download anything you want here...</h1>
+			<!--
+			<img src='./media/t.jpg'>
+			<img src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1539005333988&di=3aeb59fbdf0dc382e9d28d6fa9e63ca6&imgtype=0&src=http%3A%2F%2F01.minipic.eastday.com%2F20151110%2F20151110162718_677e73afae1a88697d8f087ca728920f_1.jpeg'>
+			<a href='./media/t.jpg' download="10-04.png">10-04.png</a>
+			-->
+			{% for item in filelist %}
+				<a href='/media/{{item}}'>{{item}}</a><br><br><br>
+			{% endfor %}
+</body>
+
+</html>

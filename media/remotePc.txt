@@ -1,0 +1,2 @@
+10.76.2.114 jiangwen jiangwen
+ssh ubuntu@139.199.230.137
